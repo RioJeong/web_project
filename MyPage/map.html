@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- Created by Antonio Min(gvvvv1123@gamil.com) 2018.01.30 -->
+<!-- Edited by Hwayeong Kang(367khy@gmail.com) 2018.06.27 -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LooRoo - About us</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115441366-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-115441366-1');
+    </script>
+
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Nanumsquare web font -->
+    <!-- Regular(400), Bold(700), Extra Bold(800), Light(300) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <!-- Goolge web font Montserrat -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="css/aboutus.css">
+    <link rel="stylesheet" href="css/navfooter.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+  <!-- way to come -->
+  <section class="address">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <h2 class="section_id mb-2" lang="en">Address</span>
+              </div>
+          </div>
+          <div class="row map_wrapper">
+              <div class="col-md-6">
+                  <div id="map"></div>
+                  <div id="button">
+                    <button class="btn btn-default" onclick="google();">구글</button>
+                    <button class="btn btn-default" onclick="daum();">다음</button>
+                    <button class="btn btn-default">네이버</button>
+                  </div>
+
+              </div>
+              <div class="col-md-6 text-left map-comment" align="center">
+                  <span class="align-middle">
+                      <p style="font-size: 15pt;">
+                          광화문 5번출구로 나온 후,<br>
+                          일민 미술관 뒤, 우체국 건물 뒤 출입구로<br>
+                          들어오시면 됩니다.
+                      </p>
+                  </span>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- way to come fin -->
+
+  <!--daum map-
+
+  </script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=419c0f594de51754670f64a05bd7a629"></script>
+  <script>
+  var container = document.getElementById('map');
+  var options = {
+    center: new daum.maps.LatLng(37.570047, 126.978221),
+    level: 3
+  };
+  var map = new daum.maps.Map(container, options);
+
+  //create marker
+  var markerPosition = new daum.maps.LatLng(37.570047, 126.978221);
+
+  var marker = new daum.maps.Marker({
+    position: markerPosition
+  });
+  function daum(){
+
+  marker.setMap(map);
+}
+  </script>
+
+-->
+    <!-- footer -->
+    <div w3-include-html="footer.html"></div>
+    <script>w3.includeHTML();</script>
+    <!-- footer fin -->
+
+
+    <script>
+      function initMap() {
+        var uluru = {lat: 37.570047, lng: 126.978221};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3a4I4priXL1jyw8YWRrkQOttB3IHPC6E&callback=initMap">
+    </script>
+    <script>
+    function toggleCollapse(index)
+    {
+        for(var i=1;i<=5;i++) {
+            if(i==index) continue;
+            $("#team"+i).collapse('hide');
+        }
+
+        $("#team"+index).collapse('toggle');
+    }
+  </script>
+</body>
+</html>

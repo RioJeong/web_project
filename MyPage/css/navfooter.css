@@ -1,0 +1,101 @@
+nav{
+    padding: 0px 40px !important;
+    margin: 0px;
+}
+
+nav ul{
+    margin: auto;
+    text-align: center;
+}
+
+#nav a {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.nav-item :hover :visited{
+    color: #000;
+}
+
+#nav .dropdown-item {
+    font-size: 1rem;
+}
+
+.nav-active{
+    color: #f5a740 !important;
+}
+
+.snsButton{
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}
+
+.footer-container{
+    float: left;
+    clear: left;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.footer{
+    position: relative;
+    height: 240px;
+    font-weight: 500;
+    font-size: 1.15em;
+}
+
+@media only screen and (max-width: 1260px) {
+    nav{
+        padding: 0px !important;
+        margin: 0px;
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    nav li{
+        width: auto;
+    }
+
+    .nav-brand{
+        margin: 5px 15px;
+    }
+
+    nav button{
+        margin-right: 10px;
+    }
+
+    #nav{
+        position: relative;
+        z-index: 99;
+        background: white;
+    }
+
+    #nav a {
+        font-size: 0.96rem;
+    }
+
+    .nav-item {
+        padding: 0 7px;
+    }
+
+    .footer{
+        height: 150px;
+        font-weight: 500;
+        font-size: 1.15em;
+    }
+
+    .footer p{
+        margin-left: 0px !important;
+        font-size: 9pt;
+    }
+
+    .mobile-spacing{
+        height: 90px;
+    }
+}
