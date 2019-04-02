@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Moomin</title>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="jquery.bxslider.min.js"></script>
+  <style>
+    #menu li {
+      display: inline;
+      font: bold 40px;
+      border-left: 5px solid black;
+      padding: 0px 100px 0px 10px;
+      margin: 5px 0px 5px 0px;
+    }
+
+    .slide ul {
+      list-style-type: none;
+    }
+
+    li:hover {
+      color: red;
+    }
+
+    a:visited {
+      color: black;
+    }
+
+    #menu {
+      padding-left: 0px;
+      text-align: center;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 80px;
+      padding-top: 30px;
+      margin-bottom: 100px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      padding-top: 40px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bx-controls.bx-has-controls-direction.bx-has-pager {
+      display: none;
+    }
+
+    .bright {
+      background-color: white;
+    }
+
+    .dark {
+      background-color: black;
+      color: yellow;
+    }
+
+    .dark #menu li {
+      color: yellow;
+      border-color: yellow;
+    }
+
+    #ani {
+      margin: 0;
+      padding: 0;
+      position: relative;
+
+    }
+  </style>
+</head>
+
+<body>
+  <input type="button" onclick="document.body.className='bright'" value="day" />
+  <input type="button" onclick="document.body.className='dark'" value="night" />
+  <input type="button" onclick="myMove()" value="무민을 잡아라" />
+  <input type="button" onclick="init()" value="무민 원위치" />
+  <img id="ani" src="img/cloud.png" width="150" />
+  <h3>Welcome to Moomin</h3>
+  <ul id="menu">
+    <a href="moominCharacter.html">
+      <li>Moomin Character</li>
+    </a>
+    <a href="moominContents.html">
+      <li>Moomin Contents</li>
+    </a>
+    <a href="moominPlace.html">
+      <li>Moomin Place</li>
+    </a>
+  </ul>
+  <div class="slide">
+    <ul class="bxslider">
+      <li><img src="img/moomin.png" alt="" width="600" /></li>
+      <li><img src="img/moomin2.png" width="600" /></li>
+      <li><img src="img/moomin3.png" width="600" /></li>
+    </ul>
+  </div>
+
+</body>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var slider = $('.bxslider').bxSlider({
+      auto: true,
+      mode: 'fade',
+    });
+
+  });
+
+  function myMove() {
+    var elem = document.getElementById("ani");
+    var id = setInterval(frame, 1000);
+
+    function onClick() {
+      alert('getcha!');
+      clearInterval(id);
+    }
+
+    function frame() {
+      var pos = Math.floor(Math.random() * window.innerHeight);
+      var pos2 = Math.floor(Math.random() * window.innerWidth);
+      elem.style.top = pos + 'px';
+      elem.style.left = pos2 + 'px';
+
+      elem.addEventListener('click', onClick);
+
+    }
+  }
+
+  function init() {
+    var elem = document.getElementById("ani");
+    elem.style.top = 0 + "px";
+    elem.style.left = 0 + "px";
+  }
+</script>
+
+</html>

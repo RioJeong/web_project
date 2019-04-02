@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Moomin Place</title>
+  <meta charset="utf-8" />
+  <style>
+    ul {
+      padding-top: 20px;
+      padding-left: 40px;
+      list-style: square;
+      border-right: 1px black solid;
+      margin: 0;
+      width: 200px;
+    }
+
+    ul li {
+      font: bold 40px;
+      padding-bottom: 30px;
+
+    }
+    li:hover{
+      color: red;
+    }
+    a{
+      text-decoration: none;
+    }
+    a:visited {
+      color: black;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 50px;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+    }
+
+    #grid #content {
+      padding-left: 20px;
+    }
+
+    #cafe {
+      border: 0;
+      float: left;
+    }
+
+    span {
+      font-size: 20px;
+      font-style: bold;
+      display: block;
+      padding-bottom: 20px;
+      padding-left: 10px;
+    }
+
+    #clear {
+      clear: both;
+    }
+
+    #grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .p {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="main.html"><h3>Welcome to Moomin</h3></a>
+  <hr />
+  <div id="grid">
+    <ul>
+      <a href="moominCharacter.html">
+        <li>Moomin Character</li>
+      </a>
+      <a href="moominContents.html">
+        <li>Moomin Contents</li>
+      </a>
+      <a href="moominPlace.html">
+        <li style="color: #00a3cc;">Moomin Place</li>
+      </a>
+    </ul>
+    <p id="content">
+      <span style="font-size:15px; background-color: wheat; padding: 10px;margin-bottom:10px; ">무민카페나 무민샵 같이 캐릭터를 좋아하는 사람들이 가면 좋아할만한 장소가 서울 몇몇 곳에 위치한다.</span><br />
+      <span class="a">카페 무민앤미</span>
+      <img src="img/moominme.jpg" width="250" id="cafe" />  <img src="img/cafe2.jpg" width="400" id="cafe" />
+      <strong class="p">위치:</strong> 서울특별시 강남구 신사동 663-1<br /><br />
+      <strong class="p">영업시간:</strong> 11:00 ~ 21:00<br /><br />
+      인테리어 하나하나 다 캐릭터를 반영해서 디자인 했고, 커피를 시키면 라떼아트로 무민 캐릭터를 그려주기도 한다. 무민앤미는 커피를 마시는 것 뿐만이 아니라 관련 상품들도 살 수 있는 곳이 마련되어 있다.
+      <div id="clear"></div>
+
+      <div>
+        <span style="padding-top:30px;">무민샵 1,2,3호점</span>
+        <div id="grid2">
+          <div>
+            <img src="img/shop1.jpg" width="430" />
+            <strong>롯데백화점 잠실점</strong><br />
+            <strong>위치:</strong> 서울 송파구 올림픽로 240 롯데백화점 잠실점 B1 영스트리트<br />
+            <strong>영업시간:</strong> 10:30-21:00
+          </div>
+          <div>
+            <img src="img/shop2.jpg" width="430" />
+            <strong>롯데월드 어드벤쳐점</strong><br />
+            <strong>위치:</strong> 서울 송파구 올림픽로 240 어드벤쳐 2층 바르셀로나광장<br />
+            <strong>영업시간:</strong> 평일(월-목) 09:30-21:00 | 주말(금-일) 09:30-22:00
+          </div>
+
+          <div>
+            <img src="img/shop3.jpg" width="430" /><br />
+            <strong>현대백화점 신촌</strong><br />
+            <strong>위치:</strong> 서울 서대문구 신촌로 83, B2<br />
+            <strong>영업시간:</strong> 10:30-21:00
+          </div>
+        </div>
+      </div>
+    </p>
+  </div>
+</body>
+
+</html>
